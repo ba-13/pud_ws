@@ -12,3 +12,13 @@ The above is error output in delx, dely, delz
 This turns out to be a persistent bias. Note that this has been printed from
 `./pud_control/src/library/lee_position_controller.cpp`
 ![Alt text](image.png)
+
+> Acceleration readings:
+
+```bash
+[ INFO] [1691769322.083675521, 1051.341000000]: 1.450118 -0.000000 -10.832030
+[ INFO] [1691769322.084438188, 1051.342000000]: 1.450118 -0.000000 -10.832030
+[ INFO] [1691769322.102628628, 1051.360000000]: 1.450118 -0.000000 -10.832030
+[ INFO] [1691769322.102834869, 1051.360000000]: 1.450118 -0.000000 -10.832030
+[ INFO] [1691769322.103460927, 1051.361000000]: 1.450118 -0.000000 -10.832030
+```
