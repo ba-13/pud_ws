@@ -96,7 +96,6 @@ void LeePositionController::ComputeDesiredAcceleration(Eigen::Vector3d* accelera
 
   Eigen::Vector3d position_error;
   position_error = odometry_.position - command_trajectory_.position_W;
-  // ROS_INFO("%f %f %f", position_error(0), position_error(1), position_error(2));
   // Transform velocity to world frame.
   const Eigen::Matrix3d R_W_I = odometry_.orientation.toRotationMatrix();
   Eigen::Vector3d velocity_W =  R_W_I * odometry_.velocity;
@@ -108,7 +107,6 @@ void LeePositionController::ComputeDesiredAcceleration(Eigen::Vector3d* accelera
   *acceleration = (position_error.cwiseProduct(controller_parameters_.position_gain_)
       + velocity_error.cwiseProduct(controller_parameters_.velocity_gain_)) / vehicle_parameters_.mass_
       - vehicle_parameters_.gravity_ * e_3 - command_trajectory_.acceleration_W;
-  ROS_INFO("%f %f %f", (*acceleration)(0), (*acceleration)(1), (*acceleration)(2));
 }
 
 // Implementation from the T. Lee et al. paper
