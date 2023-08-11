@@ -1,0 +1,3 @@
+[submodule "mav_comm"]
+	path = mav_comm
+	url = git@github.com:ethz-asl/mav_comm.git
